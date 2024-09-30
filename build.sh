@@ -1,0 +1,2 @@
+emcc src/init.c -c -o init.o -sSIDE_MODULE=1 -I ../gfx/raylib/src/ -I ../lua/ -sMIN_WEBGL_VERSION=2 -sMAX_WEBGL_VERSION=2 -sFULL_ES3 -O3
+emcc init.o ../gfx/raylib/src/libraylib.a ../gfx/glfw/src/build/libglfw.a ../gfx/exa-wayland/src/build/libexa-wayland.a -o exa/media/localhost/raylib_lua.so -sSIDE_MODULE=1 -I ../gfx/raylib/src/ -I ../lua/ -sMIN_WEBGL_VERSION=2 -sMAX_WEBGL_VERSION=2 -sFULL_ES3 -sEXPORTED_RUNTIME_METHODS=ccall,cwrap
